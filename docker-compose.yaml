@@ -1,7 +1,7 @@
 version: "3"
 services: 
   hdfs:
-    image: fengzhanyuan/hadoop:hive
+    image: registry.cn-hangzhou.aliyuncs.com/lyrewing/hadoop:latest
     networks: 
       - spark-net
     volumes: 
@@ -30,7 +30,7 @@ services:
       - "8888:8888"
 
   hdfs-job:
-    image: fengzhanyuan/hadoop:hive
+    image: registry.cn-hangzhou.aliyuncs.com/lyrewing/hadoop:latest
     depends_on: 
       - "mysql"
     networks: 
