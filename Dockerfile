@@ -1,10 +1,8 @@
 FROM java:7
 
 ENV DEBIAN_FRONTEND noninteractive
-
+RUN apt-get update
 # Refresh package lists
-RUN apt-get -qy dist-upgrade
-
 RUN apt-get install -qy rsync curl openssh-server openssh-client vim nfs-common
 
 RUN mkdir -p /data/hdfs-nfs/
