@@ -3,7 +3,6 @@ FROM java:7
 ENV DEBIAN_FRONTEND noninteractive
 
 # Refresh package lists
-RUN apt-get update
 RUN apt-get -qy dist-upgrade
 
 RUN apt-get install -qy rsync curl openssh-server openssh-client vim nfs-common
